@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "name": "binary-cat",
+  "revision": 1,
+  "mode": "indexed",
+  "canvas": { "width": 16, "height": 16 },
+  "palette_limit": 2,
+  "allow_transparency": false,
+  "palette": [
+    { "index": 0, "hex": "#FFFFFF", "name": "background" },
+    { "index": 1, "hex": "#000000", "name": "foreground" }
+  ],
+  "encoding": "matrix",
+  "pixels": [
+    "0000000000000000",
+    "0001100000011000",
+    "0001110000111000",
+    "0001111111111000",
+    "0011111111111100",
+    "0011101111011100",
+    "0011111111111100",
+    "0001110111011000",
+    "0001111111111000",
+    "0000111111110000",
+    "0000111111110000",
+    "0001111111111000",
+    "0011101111011100",
+    "0011001111001100",
+    "0000000000000000",
+    "0000000000000000"
+  ],
+  "style": {
+    "preset": "binary_icon",
+    "silhouette_priority": "high",
+    "outline": "none",
+    "shading": "none",
+    "dithering": "disabled",
+    "symmetry": "approximate_vertical",
+    "detail_level": "low",
+    "edge_language": "intentional_steps",
+    "negative_space": "clear",
+    "isolated_pixels": "avoid",
+    "visual_weight": "balanced"
+  },
+  "metadata": { "subject": "front-facing cat icon" }
+}

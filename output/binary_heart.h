@@ -1,0 +1,32 @@
+#ifndef BINARY_HEART_H
+#define BINARY_HEART_H
+
+#include <stdint.h>
+
+/* Row-major pixels: left-to-right, top-to-bottom, MSB first.
+ * Each row is padded with zero bits to a complete byte.
+ */
+#define BINARY_HEART_WIDTH 16
+#define BINARY_HEART_HEIGHT 16
+#define BINARY_HEART_DATA_LENGTH 32
+
+static const uint8_t binary_heart_data[BINARY_HEART_DATA_LENGTH] = {
+    0x00, 0x00,
+    0x18, 0x18,
+    0x3C, 0x3C,
+    0x7E, 0x7E,
+    0x7F, 0xFE,
+    0x7F, 0xFE,
+    0x3F, 0xFC,
+    0x1F, 0xF8,
+    0x0F, 0xF0,
+    0x07, 0xE0,
+    0x03, 0xC0,
+    0x01, 0x80,
+    0x00, 0x00,
+    0x00, 0x00,
+    0x00, 0x00,
+    0x00, 0x00,
+};
+
+#endif

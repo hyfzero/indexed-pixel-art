@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/indexed-pixel-art/pixel-art.schema.json",
+  "title": "Indexed Pixel Art Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "name",
+    "revision",
+    "mode",
+    "canvas",
+    "palette_limit",
+    "allow_transparency",
+    "palette",
+    "encoding",
+    "pixels"
+  ],
+  "properties": {
+    "version": { "const": "1.0" },
+    "name": { "type": "string", "minLength": 1 },
+    "revision": { "type": "integer", "minimum": 1 },
+    "mode": { "const": "indexed" },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1, "maximum": 256 },
+        "height": { "type": "integer", "minimum": 1, "maximum": 256 }
+      }
+    },
+    "palette_limit": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "allow_transparency": { "type": "boolean" },
+    "transparent_index": { "type": "integer", "minimum": 0, "maximum": 9 },
+    "palette": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "hex", "name"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+          "name": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "encoding": { "const": "matrix" },
+    "pixels": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[0-9]*$" }
+    },
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preset": {
+          "enum": ["binary_icon", "clean_icon", "retro_sprite", "gameboy", "terminal_oled", "pixel_avatar"]
+        },
+        "silhouette_priority": { "enum": ["low", "medium", "high"] },
+        "outline": { "enum": ["none", "solid", "selective"] },
+        "outline_index": { "type": "integer", "minimum": 0, "maximum": 9 },
+        "shading": { "enum": ["none", "flat", "clustered"] },
+        "dithering": { "enum": ["disabled", "checkerboard", "sparse_checkerboard", "ordered_2x2"] },
+        "symmetry": { "enum": ["vertical", "approximate_vertical", "none"] },
+        "detail_level": { "enum": ["minimal", "low", "medium", "high"] },
+        "edge_language": { "const": "intentional_steps" },
+        "negative_space": { "enum": ["clear", "balanced"] },
+        "isolated_pixels": { "enum": ["avoid", "limited", "allow"] },
+        "visual_weight": { "enum": ["balanced", "top", "bottom", "left", "right"] }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "safe_margin": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["top", "right", "bottom", "left"],
+          "properties": {
+            "top": { "type": "integer", "minimum": 0 },
+            "right": { "type": "integer", "minimum": 0 },
+            "bottom": { "type": "integer", "minimum": 0 },
+            "left": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "metadata": { "type": "object" }
+  }
+}

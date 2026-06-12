@@ -1,0 +1,4 @@
+interface:
+  display_name: "Indexed Pixel Art"
+  short_description: "Create strict indexed-color pixel art"
+  default_prompt: "Use $indexed-pixel-art to create validated indexed-color pixel art and render its PNG outputs."

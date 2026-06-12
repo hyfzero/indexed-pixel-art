@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "name": "four-color-slime",
+  "revision": 1,
+  "mode": "indexed",
+  "canvas": { "width": 16, "height": 16 },
+  "palette_limit": 4,
+  "allow_transparency": false,
+  "palette": [
+    { "index": 0, "hex": "#E8F6D0", "name": "background" },
+    { "index": 1, "hex": "#1E3A2A", "name": "outline" },
+    { "index": 2, "hex": "#71C837", "name": "body" },
+    { "index": 3, "hex": "#B8F05A", "name": "highlight" }
+  ],
+  "encoding": "matrix",
+  "pixels": [
+    "0000000000000000",
+    "0000001111000000",
+    "0000112222110000",
+    "0001223333221000",
+    "0012233333322100",
+    "0122222222222210",
+    "0122222222222210",
+    "0122112222112210",
+    "0122112222112210",
+    "0122222222222210",
+    "0122211112222210",
+    "0122222222222210",
+    "0122222222222210",
+    "0011111111111100",
+    "0000000000000000",
+    "0000000000000000"
+  ],
+  "style": {
+    "preset": "retro_sprite",
+    "silhouette_priority": "high",
+    "outline": "solid",
+    "outline_index": 1,
+    "shading": "flat",
+    "dithering": "disabled",
+    "symmetry": "approximate_vertical",
+    "detail_level": "low",
+    "edge_language": "intentional_steps",
+    "negative_space": "balanced",
+    "isolated_pixels": "limited",
+    "visual_weight": "balanced"
+  },
+  "metadata": { "subject": "friendly green slime" }
+}
