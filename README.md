@@ -1,5 +1,7 @@
 # indexed-pixel-art
 
+**语言：** [简体中文](README.md) | [English](README.en.md)
+
 完整安装、命令行操作和 Codex 调用说明见
 [《Indexed Pixel Art 用户手册》](docs/用户手册.md)。
 
