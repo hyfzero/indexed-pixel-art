@@ -1,5 +1,8 @@
 # indexed-pixel-art
 
+完整安装、命令行操作和 Codex 调用说明见
+[《Indexed Pixel Art 用户手册》](docs/用户手册.md)。
+
 这是一个可运行的 Codex Skill，用有限调色板和离散索引矩阵生成真正的像素画。LLM
 负责设计每一个像素，Python 工具负责严格校验、逐像素渲染、PNG 复检、局部修改和
 二值 C 数组导出。
